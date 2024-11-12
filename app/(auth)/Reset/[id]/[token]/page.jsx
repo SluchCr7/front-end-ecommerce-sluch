@@ -14,7 +14,7 @@ const Page = ({params}) => {
     e.preventDefault()
     if(password == "") toast.error('password is required')
     else{
-      axios.post(`http://localhost:3001/api/password/reset/${id}/${token}`, {password})
+      axios.post(`https://sluchend.vercel.app/api/password/reset/${id}/${token}`, {password})
         .then(res => {
           toast.success(res.data)
           window.location.href = "/Login"

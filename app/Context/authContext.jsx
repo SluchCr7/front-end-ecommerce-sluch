@@ -11,7 +11,7 @@ const AuthContextProvider = (props) => {
     const [loginStatus , setLoginStatus] = useState(false)
     const [user, setUser] = useState({})
     const Login = (user) => {
-        axios.post('http://localhost:3001/api/auth/login', {
+        axios.post('https://sluchend.vercel.app/api/auth/login', {
             email: user.email,
             password: user.password
         })

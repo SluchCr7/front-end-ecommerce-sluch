@@ -16,18 +16,19 @@ const Page = () => {
     password: ''
   })
   useEffect(() => {
-    axios.post('http://localhost:3001/api/auth/register', {
-      name: user.username,
-      email: user.email,
-      password: user.password
-    })
-      .then(res => {
-        window.location.href = "/Login"
-        toast.success(res.data.message)
+    axios
+      .post("https://sluchend.vercel.app/api/api/auth/register", {
+        name: user.username,
+        email: user.email,
+        password: user.password,
       })
-      .catch(err => {
-        toast.error(err.response.data)
+      .then((res) => {
+        window.location.href = "/Login";
+        toast.success(res.data.message);
       })
+      .catch((err) => {
+        toast.error(err.response.data);
+      });
   })
   const [showPassword, setShowPassword] = useState(false)
   return (

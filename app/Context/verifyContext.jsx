@@ -10,7 +10,7 @@ export const VerifyContextProvider = ({ children }) => {
 
     const [verifyStatus, setVerifyStatus] = useState(false)
     const verify = async (id,token) => {
-        axios.get(`http://localhost:3001/api/auth/${id}/verify/${token}`)
+        axios.get(`https://sluchend.vercel.app/api/auth/${id}/verify/${token}`)
             .then(res => {
                 setVerifyStatus(true)
                 toast.success("Email Verified")

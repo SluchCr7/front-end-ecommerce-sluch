@@ -9,7 +9,7 @@ const Page = () => {
         e.preventDefault()
         if(email === '') toast.error('Email is required')
         else {
-            axios.post('http://localhost:3001/api/password/reset', {email})
+            axios.post('https://sluchend.vercel.app/api/password/reset', {email})
             .then(res => {
                 toast.success(res.data)
             })
