@@ -93,7 +93,7 @@ const Nav = () => {
       </div>
           <div className={`${isNavMobileOpen ? "flex" : "hidden"} flex-col items-start w-full bg-[#eaeaea]`}>   
               {links.map((link, index) => (
-                <Link href={`/${link}`} key={index} className={`hover:text-ModeOne-text dark:hover:text-ModeTwo-text ${pathname === `/${link}` ? "text-ModeOne-text dark:text-ModeTwo-text" : ""}`}>
+                <Link href={`/${link}`} key={index} className={`hover:text-ModeOne-text dark:hover:text-ModeTwo-text p-3 ${pathname === `/${link}` ? "text-ModeOne-text dark:text-ModeTwo-text" : ""}`}>
                   {link}
                 </Link>
               ))}
