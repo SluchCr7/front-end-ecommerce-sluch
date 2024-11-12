@@ -17,7 +17,7 @@ const Page = () => {
   })
   useEffect(() => {
     axios
-      .post("https://sluchend.vercel.app/", {
+      .post(`${process.env.SERVERURL}/api/auth/register`, {
         name: user.username,
         email: user.email,
         password: user.password,
