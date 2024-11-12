@@ -38,7 +38,7 @@ const Hero = () => {
         </div>
         <div className="flex items-center flex-col gap-3">
           <Image
-            src={"/frontend_assets/hero_img.png"}
+            src={"/frontend_assets/hero_img.jpg"}
             alt="hero"
             width={1100}
             height={1100}
