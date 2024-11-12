@@ -23,7 +23,7 @@ const Page = () => {
       }
     }
     setProductsCartArr(tempData)
-  }, [productsCartArr])
+  }, [productCart])
   return (
     <div className='flex items-start gap-10 p-10 bg-ModeOne-primary dark:bg-ModeTwo-primary'>
       <div className='w-[60%] flex flex-col items-start gap-4'>

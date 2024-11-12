@@ -19,7 +19,7 @@ const Page = ({ params }) => {
   const {loginStatus , user} = useContext(authContext)
   useEffect(() => {
     setRelated(products.filter(item => item.category == product.category && item._id != product._id && item.subCategory == product.subCategory))
-  }, [product])
+  }, [products, product.category, product._id, product.subCategory])
 
 
   return (

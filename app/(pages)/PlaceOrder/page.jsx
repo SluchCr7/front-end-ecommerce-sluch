@@ -19,7 +19,7 @@ const Page = () => {
       }
     }
     setProductsCartArr(tempData)
-  }, [productsCartArr])
+  }, [productCart])
   const inputsData = [
     [
       {

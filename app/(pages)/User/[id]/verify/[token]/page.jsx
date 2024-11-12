@@ -3,7 +3,7 @@ import { verifyContext } from '@/app/Context/verifyContext'
 import React from 'react'
 import { useContext, useEffect } from 'react'
 import Link from 'next/link'
-const page = ({ params }) => {
+const Page = ({ params }) => {
     const {id, token} = params
     const {verifyStatus, setVerifyStatus, verify} = useContext(verifyContext)
     useEffect(() => {
@@ -32,4 +32,4 @@ const page = ({ params }) => {
   )
 }
 
-export default page
+export default Page
