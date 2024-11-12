@@ -13,16 +13,13 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="bg-ModeOne-primary my-4 dark:bg-ModeTwo-primary w-full">
-      <div className="container mx-auto min-h-[70vh] pt-20 p-5 flex flex-col lg:flex-row items-center gap-6">
-        <div className="flex flex-col lg:items-start gap-6">
-          <span className="text_headline text-ModeOne-third dark:text-ModeTwo-third">
-            Best Products
-          </span>
-          <h1 className="text-5xl font-bold text-ModeOne-text dark:text-ModeTwo-text">
+    <div className="bg-ModeOne-primary min-h-[100vh] bg-[url('/frontend_assets/hero_img.jpg')] bg-center bg-no-repeat dark:bg-ModeTwo-primary w-full">
+      <div className="container mx-auto min-h-[70vh] pt-20 p-5 flex flex-col items-center justify-center gap-6">
+        <div className="flex flex-col lg:items-center gap-6">
+          <h1 className="text-5xl font-bold text-ModeOne-primary tracking-[5px]">
             Latest Collection
           </h1>
-          <p className="text-sm w-2/3 text-center md:text-left text-ModeOne-text dark:text-ModeTwo-text">
+          <p className="text-sm w-2/3 text-center text-ModeTwo-text">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas
             laborum quos facere quaerat quisquam illum, animi praesentium cum!
             Porro rerum fugiat quaerat pariatur modi sunt accusantium deserunt
@@ -36,7 +33,7 @@ const Hero = () => {
           </Link>
 
         </div>
-        <div className="flex items-center flex-col gap-3">
+        {/* <div className="flex items-center flex-col gap-3">
           <Image
             src={"/frontend_assets/hero_img.jpg"}
             alt="hero"
@@ -44,7 +41,7 @@ const Hero = () => {
             height={1100}
             className="rounded-md"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

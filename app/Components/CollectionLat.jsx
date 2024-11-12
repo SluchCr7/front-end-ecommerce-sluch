@@ -33,7 +33,7 @@ const CollectionLat = () => {
                 {product.name}
               </h3>
               <span className="text-lg text-ModeOne-third dark:text-ModeTwo-third">
-                {product.price} {currency}
+                {product.price} $
               </span>
             </Link>
           ))}

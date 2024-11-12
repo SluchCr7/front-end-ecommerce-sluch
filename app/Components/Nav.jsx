@@ -37,12 +37,11 @@ const Nav = () => {
     "About",
     "Collection",
     "contact",
-    "PlaceOrder",
   ];
 
   return (
     <div className="flex items-center z-[999] flex-col bg-ModeOne-primary dark:bg-ModeTwo-primary">
-      <div className={`flex items-center justify-between w-full py-5 px-9 ${isNavMobileOpen ? "" : "shadow-lg dark:shadow-sm dark:shadow-gray-400"}`}>
+      <div className={`flex items-center justify-between w-full py-3 px-9 ${isNavMobileOpen ? "" : "shadow-lg dark:shadow-sm dark:shadow-gray-400"}`}>
         <Link href="/" className="text-xl tracking-[2px] text-ModeOne-text dark:text-ModeTwo-text font-extrabold">
           Sluch<span className="font-bold ">.</span>
         </Link>
@@ -93,7 +92,7 @@ const Nav = () => {
       </div>
           <div className={`${isNavMobileOpen ? "flex" : "hidden"} flex-col items-start w-full bg-[#eaeaea]`}>   
               {links.map((link, index) => (
-                <Link href={`/${link}`} key={index} className={`hover:text-ModeOne-text dark:hover:text-ModeTwo-text p-3 ${pathname === `/${link}` ? "text-ModeOne-text dark:text-ModeTwo-text" : ""}`}>
+                <Link href={`/${link}`} key={index} className={`hover:text-ModeOne-text uppercase dark:hover:text-ModeTwo-text p-3 ${pathname === `/${link}` ? "text-ModeOne-text dark:text-ModeTwo-text" : ""}`}>
                   {link}
                 </Link>
               ))}
