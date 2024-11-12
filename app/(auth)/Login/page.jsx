@@ -9,7 +9,7 @@ import { authContext } from '@/app/Context/authContext'
 import { BiSolidShow } from "react-icons/bi";
 import { BiSolidHide } from "react-icons/bi";
 import Title from '@/app/Components/Title'
-const page = () => {
+const Page = () => {
   const { Login } = useContext(authContext)
   const [showPassword, setShowPassword] = useState(false)
   const [user, setUser] = useState({
@@ -43,4 +43,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

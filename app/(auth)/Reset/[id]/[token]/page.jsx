@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { BiSolidShow } from "react-icons/bi";
 import { BiSolidHide } from "react-icons/bi";
 
-const page = ({params}) => {
+const Page = ({params}) => {
   const {id , token} = params
   const [password, setpassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
@@ -43,4 +43,4 @@ const page = ({params}) => {
   )
 }
 
-export default page
+export default Page
