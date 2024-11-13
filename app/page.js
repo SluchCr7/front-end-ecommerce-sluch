@@ -10,10 +10,12 @@ export default function Home() {
   return (
     <div className="flex items-center flex-col gap-20">
       <Hero />
-      <CollectionLat />
-      <Ads/>
-      <BestSellers />
-      <Features/>
+      <div className="flex items-center flex-col gap-20 pt-[42rem]">
+        <CollectionLat />
+        <Ads/>
+        <BestSellers />
+        <Features/>
+      </div>
     </div>
   );
 }

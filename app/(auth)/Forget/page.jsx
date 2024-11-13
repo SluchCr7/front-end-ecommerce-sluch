@@ -1,15 +1,18 @@
 'use client'
 import axios from 'axios';
-import React , {useState} from 'react'
+import React , {useEffect, useState} from 'react'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 const Page = () => {
     const [email, setemail] = useState('')
+    useEffect(() => {
+        console.log(process.env.SERVERURL)
+    },[])
     const handleForget = (e) => {
         e.preventDefault()
         if(email === '') toast.error('Email is required')
         else {
-            axios.post('https://sluchend.vercel.app/api/password/reset', {email})
+            axios.post(`${process.env.SERVERURL}/api/password/reset`, {email})
             .then(res => {
                 toast.success(res.data)
             })
