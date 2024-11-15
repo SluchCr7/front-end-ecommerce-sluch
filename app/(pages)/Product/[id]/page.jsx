@@ -88,13 +88,13 @@ const Page = ({ params }) => {
         </div>
         <div className='flex justify-center w-full text-center flex-col gap-2 p-5 pb-9'>
           <span className='text-ModeOne-text dark:text-ModeTwo-text font-bold'>Related Products</span>
-          <div className='flex items-center gap-10 mx-auto'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-14 mx-auto'>
             {
               related.map((product) => {
                 return (
-                  <div key={product._id} className='w-[150px] h-[150px] relative'>  
+                  <div key={product._id} className='w-[100%] h-[100%] relative'>  
                     <Link href={`/Product/${product._id}`}>
-                      <Image src={product.image} alt={product._id} width={150} height={150} quality={100} className='rounded-lg' />
+                      <Image src={product.image} alt={product._id} width={300} height={300} quality={100} className='rounded-lg w-[100%]' />
                       <h3 className='text-ModeOne-text dark:text-ModeTwo-text pt-1 text-xs font-bold'>{product.name}</h3>
                     </Link> 
                   </div>

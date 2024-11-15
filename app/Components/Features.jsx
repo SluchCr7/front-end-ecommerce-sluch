@@ -18,7 +18,7 @@ const Features = () => {
 
 
   return (
-    <div className="flex items-center gap-10 p-5">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 p-5">
       {features.map((feature, index) => (
         <div key={index} className="flex items-center flex-col gap-3">
           <Image src={feature.img} alt={`Feature ${index + 1}`} width={35} height={35} />

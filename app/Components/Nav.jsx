@@ -59,8 +59,8 @@ const Nav = () => {
 
   return (
     <div className={`flex w-full items-center sticky top-0 z-[999] flex-col ${isHome ? isScroll ? "bg-ModeOne-primary dark:bg-ModeTwo-primary" : "" : "bg-ModeOne-primary dark:bg-ModeTwo-primary"}`}> 
-      <div className={`flex items-center justify-between w-full py-3 px-9 ${isNavMobileOpen ? "" : "shadow-lg dark:shadow-sm dark:shadow-gray-400"}`}>
-        <Link href="/" className="text-xl tracking-[2px] text-ModeOne-text dark:text-ModeTwo-text font-extrabold">
+      <div className={`flex items-center justify-between w-full py-3 px-9 ${isNavMobileOpen ? "" : isScroll ? "shadow-lg dark:shadow-sm dark:shadow-gray-400" :""}`}>
+        <Link href="/" className="text-xl tracking-[2px] text-ModeOne-secondary dark:text-ModeTwo-third font-extrabold">
           Sluch<span className="font-bold ">.</span>
         </Link>
         <ul className="hidden md:flex gap-8 uppercase text-ModeOne-secondary dark:text-ModeTwo-third items-center text-[10px] items font-semibold">

@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="flex items-center flex-col gap-20">
       <Hero />
-      <div className="flex items-center flex-col gap-20 pt-[42rem]">
+      <div className="flex items-center flex-col gap-20 pt-[2rem]">
         <CollectionLat />
         <Ads/>
         <BestSellers />
