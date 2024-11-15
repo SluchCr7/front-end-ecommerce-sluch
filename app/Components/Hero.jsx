@@ -13,7 +13,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="bg-ModeOne-primary absolute top-0 min-h-[100vh] bg-[url('/frontend_assets/hero_img.jpg')] bg-center bg-no-repeat bg-cover dark:bg-ModeTwo-primary w-full">
+    <div className="bg-ModeOne-primary absolute top-0 min-h-[100vh] bg-[url('/frontend_assets/Clothes2.jpg')] bg-center bg-no-repeat bg-cover dark:bg-ModeTwo-primary w-full">
       <div className="container mx-auto min-h-[100vh] pt-20 p-5 flex flex-col items-center gap-6">
         <div className="flex flex-col justify-center w-full min-h-[80vh] lg:items-center gap-6">
           <h1 className="text-4xl uppercase font-bold text-ModeOne-primary tracking-[5px]">
