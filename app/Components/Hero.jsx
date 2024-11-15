@@ -13,13 +13,13 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="bg-ModeOne-primary absolute top-0 min-h-[100vh] bg-[url('/frontend_assets/Clothes2.jpg')] bg-center bg-no-repeat bg-cover dark:bg-ModeTwo-primary w-full">
+    <div className="bg-ModeOne-primary absolute top-0 min-h-[100vh] bg-[url('/frontend_assets/Clothes2.jpg')] bg-fixed bg-center bg-no-repeat bg-cover dark:bg-ModeTwo-primary w-full">
       <div className="container mx-auto min-h-[100vh] pt-20 p-5 flex flex-col items-center gap-6">
         <div className="flex flex-col justify-center w-full min-h-[80vh] lg:items-center gap-6">
-          <h1 className="text-4xl uppercase font-bold text-ModeOne-primary tracking-[5px]">
+          <h1 className="text-4xl paragraph uppercase font-bold tracking-[7px]">
             Best Products 
           </h1>
-          <p className="text-sm w-2/3 text-center text-ModeTwo-primary">
+          <p className="text-sm w-2/3 text-center text-gray-100">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas
             laborum quos facere quaerat quisquam illum, animi praesentium cum!
             Porro rerum fugiat quaerat pariatur modi sunt accusantium deserunt
@@ -27,21 +27,12 @@ const Hero = () => {
           </p>
           <Link
             href="/Collection"
-            className="bg-red-700 cursor-pointer text-white px-4 py-2 rounded-md"
+            className="border-[1px] border-ModeTwo-third text-ModeTwo-third uppercase tracking-[3px] flex items-center justify-center w-[200px] p-3 rounded-md"
           >
             Shop Now
           </Link>
 
         </div>
-        {/* <div className="flex items-center flex-col gap-3">
-          <Image
-            src={"/frontend_assets/hero_img.jpg"}
-            alt="hero"
-            width={1100}
-            height={1100}
-            className="rounded-md"
-          />
-        </div> */}
       </div>
     </div>
   );

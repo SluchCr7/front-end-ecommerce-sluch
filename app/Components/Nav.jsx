@@ -15,6 +15,8 @@ const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isNavMobileOpen, setIsNavMobileOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isHome , setIsHome] = useState(false)
+  const [isScroll , setIsScroll] = useState(false)
   const { numProducts } = useContext(shopContext);
   const { user, logout, isUserLoggedIn } = useContext(authContext);
   const pathname = usePathname();
@@ -32,7 +34,23 @@ const Nav = () => {
       localStorage.setItem("theme", "light");
     }
   }, [isDarkMode]);
-
+  useEffect(() => {
+    if (pathname === "/") setIsHome(true)
+    else setIsHome(false)
+  }, [pathname])
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        setIsScroll(true)
+      } else {
+        setIsScroll(false)
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  })
   const links = [
     "About",
     "Collection",
@@ -40,7 +58,7 @@ const Nav = () => {
   ];
 
   return (
-    <div className={`flex w-full items-center sticky top-0 z-[999] flex-col bg-ModeOne-primary dark:bg-ModeTwo-primary`}> 
+    <div className={`flex w-full items-center sticky top-0 z-[999] flex-col ${isHome ? isScroll ? "bg-ModeOne-primary dark:bg-ModeTwo-primary" : "" : "bg-ModeOne-primary dark:bg-ModeTwo-primary"}`}> 
       <div className={`flex items-center justify-between w-full py-3 px-9 ${isNavMobileOpen ? "" : "shadow-lg dark:shadow-sm dark:shadow-gray-400"}`}>
         <Link href="/" className="text-xl tracking-[2px] text-ModeOne-text dark:text-ModeTwo-text font-extrabold">
           Sluch<span className="font-bold ">.</span>

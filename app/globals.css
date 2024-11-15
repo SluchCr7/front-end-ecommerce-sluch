@@ -63,3 +63,11 @@
 ::-webkit-scrollbar{
     display: none;
 }
+.paragraph {
+    line-height: 1.5rem;
+    -webkit-text-stroke: 1px #f32; 
+    -webkit-text-fill-color: transparent;
+    /* background: linear-gradient(to right, #000, #fff, #000);
+    -webkit-background-clip: text;
+    background-clip: text; */
+}
